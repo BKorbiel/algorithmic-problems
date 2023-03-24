@@ -1,0 +1,6 @@
+The task is to find a 2D subarray whose sum is the largest. This sum cannot be negative - if all the elements in the array are less 
+than zero then the maximum subarray is empty and the sum is 0. The program should run in O(max(n, m)^3) time (n and m are the 
+number of rows and columns). The output should be the maximum sum and the indices i, j, k, l of the subarray, where 'i' and 'j' are 
+row numbers, and 'k' and 'l' are column numbers where the subarray starts and ends, respectively. If there are multiple subarrays 
+with the maximum sum, return the one with the least number of elements. If there are multiple such subarrays, return the one whose 
+indices i, j, k, l form the lexicographically smallest sequence."
