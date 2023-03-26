@@ -1,0 +1,99 @@
+The task is to find out how many numbers from a given ordered set of data are contained in a given range. This should be
+done with O(log N) time complexity and O(1) memory complexity. After that the program should output the number of different
+numbers in the data set.
+
+Input:
+Data to the program is read from the standard input. The first value provided is the number of data sets, after which the 
+input will contain the specified number of data sets. Each data set contains the following information: the number of data in 
+the array being inputed. The array is in non-decreasing order. Then the array is inputed, which is the long integer numbers in 
+the amount equal to the previously inputed number. Next is the number of queries. For each query two numbers are given that 
+define the range of values for which the program should answer the question of how many numbers in the array are contained in 
+that range.
+
+Output:
+For each data set:
+For each given range of values the program should output the answer on how many numbers from the array are contained in that 
+range. The number of different numbers in the array should be printed on the last line.
+
+Examples
+
+Input:
+2
+1
+1
+3
+0 2
+1 1
+3 0
+6
+-1 -1 -0 0 3 3
+5
+-1 3
+-0 3
+0 3
+-2 0
+-2 3
+
+Output:
+1
+1
+0
+1
+6
+4
+4
+4
+6
+3
+
+
+Input:
+2
+12
+-1 1 2 2 2 3 5 5 7 7 9 9
+12
+1 2
+2 2
+3 6
+2 1
+-1 10
+1 0
+4 6
+4 3
+-1 9
+1 1
+4 4
+0 9
+10
+1 1 1 1 1 1 1 1 1 1
+7
+1 2
+0 1
+1 1
+0 0
+2 2
+3 1
+-1 -1 
+
+Output:
+4
+3
+3
+0
+12
+0
+2
+0
+12
+1
+0
+11
+7
+10
+10
+10
+0
+0
+0
+0
+1
