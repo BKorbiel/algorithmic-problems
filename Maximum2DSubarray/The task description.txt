@@ -6,14 +6,14 @@ with the maximum sum, return the one with the least number of elements. If there
 indices i, j, k, l form the lexicographically smallest sequence.
 
 Input:
-The input data for the program is read from the standard input according to the following specification. The first value provided is <br/>
-a positive integer indicating the number of data sets, after which the input will contain the specified number of data sets. Each data <br/>
-set contains the following information: the dataset number on the first line, followed by a string " : " and two positive integers <br/>
-between 1 and 100 indicating the number of rows and columns in the array, respectively. The next lines contain the data for each row of <br/>
-the array, in accordance with the specified number of rows and columns.<br/>
-<br/>
-Output:<br/>
-For each data set number, if the maximum subarray is not empty, the program will print a line in the form: <br/>
-{nz}: n = {n} m = {m}, ms = {max_sum}, mst = a[{i}..{j}][{k}..{l}] <br/>
-Data in curly braces {} should be replaced with appropriate data. "nz" is data set number, n and m are numbers of rows and columns, <br/>
+The input data for the program is read from the standard input according to the following specification. The first value provided is
+a positive integer indicating the number of data sets, after which the input will contain the specified number of data sets. Each data
+set contains the following information: the dataset number on the first line, followed by a string " : " and two positive integers
+between 1 and 100 indicating the number of rows and columns in the array, respectively. The next lines contain the data for each row of
+the array, in accordance with the specified number of rows and columns.
+
+Output:
+For each data set number, if the maximum subarray is not empty, the program will print a line in the form:
+{nz}: n = {n} m = {m}, ms = {max_sum}, mst = a[{i}..{j}][{k}..{l}]
+Data in curly braces {} should be replaced with appropriate data. "nz" is data set number, n and m are numbers of rows and columns,
 "max_sum" is the sum of elements in maximum 2D subarray and "i", "j", "k", "l" are subarray indices.
