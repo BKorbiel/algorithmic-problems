@@ -1,0 +1,61 @@
+Write a Java program that will perform the following operations:
+
+1. During the analysis of input expressions, the program removes characters that cannot appear in the given expressions, 
+such as spaces, commas, or parentheses in RPN expressions, and checks the syntactic correctness of expressions. 
+2. Converts arithmetic expressions and assignment statements from INF notation to RPN.
+3. Converts arithmetic expressions and assignment statements from RPN notation to INF notation containing the minimum 
+number of parentheses that guarantee the same order of operations as in the RPN expression.
+
+Arithmetic expressions can only contain:
+a) Parentheses: (, ) - only in INF notation
+b) Operands: lowercase English alphabet letters
+c) Operators (in descending order of priority), along with their associativity:
+! and ~ - right-associative
+^ - right-associative
+*, / and % - left-associative
++ and - - left-associative
+< and > - left-associative
+? - left-associative
+& - left-associative
+| - left-associative
+= - right-associative
+
+Input:
+The program reads data from standard input according to the following specification. The first input line contains an integer z, 
+indicating the number of lines containing arithmetic expressions or assignment statements that follow.
+Each line contains at least 6 characters and does not exceed 256 characters. It can have one of two forms:
+INF: An arithmetic expression or assignment statement written in infix notation.
+RPN: An arithmetic expression or assignment statement written in RPN notation
+
+Output:
+An expression preceded by the input string 'INF: ' must be preceded by the output string 'RPN: ', and similarly, an expression 
+preceded by the input string 'RPN: ' must be preceded by the output string 'INF: '. In case of an invalid expression, the output 
+should display the string "error" instead of the converted expression. If the expression is valid, the converted expression 
+should be printed.
+All elements of the expressions in the output are preceded by a single space.
+
+Tests
+Input:
+10
+INF: a        +.m  *c^d^f
+RPN: abcd^
+RPN: ab, .cd!!!!!!++*
+RPN: a**
+INF: a++(b-c)
+INF: a+(b-c)*d^y
+RPN: dfghjkl^^^^()+*
+INF: a*b-c^d/y%h&u
+RPN: ab+cd-kl^op/ui%abc!~++
+INF: ~~!~~!(a+b-c*~!~d)
+
+Output:
+RPN: a m c d f ^ ^ * +
+INF: error
+INF: a * ( b + ( c + ! ! ! ! ! ! d ) )
+INF: error
+RPN: error
+RPN: a b c - d y ^ * +
+INF: d * ( f + g ^ h ^ j ^ k ^ l )
+RPN: a b * c d ^ y / h % - u &
+INF: error
+RPN: a b + c d ~ ! ~ * - ! ~ ~ ! ~ ~
