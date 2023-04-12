@@ -1,0 +1,134 @@
+The task is to manage a singly linked list of trains (without a head). Each train is a doubly linked list of carriages. 
+Each train and each carriage has its own unique name. All commands are valid, meaning they will not create a second train 
+with the same name, nor will they be used on a non-existent train.
+Commands:
+1. New T1 W - creates a new train named T1 and one carriage named W, and inserts it into the list of trains.
+2. InsertFirst T1 W - inserts a carriage named W at the beginning of the train named T1.
+3. InsertLast T1 W - inserts a carriage named W at the end of the train named T1.
+4. Display T1 - displays every carriage of the train named T1.
+4. TrainsList - displays the current list of trains.
+5. Reverse T1 - reverses the order of carriages in the train named T1.
+6. Union T1 T2 - appends the train named T2 to the end of the train named T1, and removes the train T2 from the list of trains.
+7. DelFirst T1 T2 - removes the first carriage from the train named T1 and creates a new train named T2 with it, and if it was 
+the only carriage in T1, T1 ceases to exist (it is removed from the list of trains).
+8. DelLast T1 T2 - removes the last carriage from the train named T1 and creates a new train named T2 with it, and if it was 
+the only carriage in T1, T1 ceases to exist (it is removed from the list of trains).
+
+-All mentioned commands, except for Display and TrainsList, must operate in O(1) time (after finding the required train in the 
+list of trains) and use as little memory as possible.
+-All auxiliary operations, such as inserting a new train, searching for a given train, or removing a train, should be implemented 
+to contain the minimum number of list traversals.
+
+Input:
+The first line of the input contains an integer z - the number of data sets that follow one after the other.
+The first line of each set contains an integer n (1 <=n <=10^6) representing the number of commands, and each command is placed 
+on a separate line and contains one to three words.
+The first word is the command name and is always followed by a space. Any remaining words, if present, are separated by a single 
+space.
+
+Output:
+In response to the command: Display train_name print the current list of carriages for the specified train. The description of 
+the list begins with the train name, followed by a colon and a space, after which the names of the carriages appear separated by 
+a space in the order from the first to the last carriage on the list.
+In response to the command TrainsList print the current list of trains. The description of the list begins with the word "Trains" 
+followed by a colon and a space, after which the names of the trains appear separated by a space in the order from the first to 
+the last train on the list. 
+At the end of each list, there should be a newline character.
+
+Tests
+Input:
+1
+23
+New T1 W1
+InsertLast T1 W2
+Display T1
+InsertFirst T1 W0
+Display T1
+DelFirst T1 T2
+Display T1
+Display T2
+DelLast T1 T3
+Display T1
+Display T3
+TrainsList
+New T4 Z1
+InsertLast T4 Z2
+Reverse T4
+Display T4
+Union T3 T4
+Display T3
+TrainsList
+Union T3 T2
+Display T3
+Reverse T3
+Display T3
+
+Output:
+T1: W1 W2
+T1: W0 W1 W2
+T1: W1 W2
+T2: W0
+T1: W1
+T3: W2
+Trains: T3 T2 T1
+T4: Z2 Z1
+T3: W2 Z2 Z1
+Trains: T3 T2 T1
+T3: W2 Z2 Z1 W0
+T3: W0 Z1 Z2 W2
+
+
+Input:
+2
+18
+New T1 W1
+InsertFirst T1 W0
+InsertLast T1 W2
+Reverse T1
+Display T1
+DelFirst T1 T2
+TrainsList
+Union T1 T2
+Display T1
+TrainsList
+New T3 W3
+InsertLast T3 W4
+Display T3
+TrainsList
+Reverse T3
+Union T1 T3
+Display T1
+TrainsList
+15
+New T1 W1
+New T2 W2
+New T3 W3
+TrainsList
+DelFirst T3 T4
+DelLast T2 T5
+TrainsList
+Display T5
+Union T4 T5
+Reverse T4
+Display T4
+TrainsList
+Union T1 T4
+Dispaly T1
+TrainsList
+
+Output:
+T1: W2 W1 W0
+Trains: T2 T1
+T1: W1 W0 W2
+Trains: T1
+T3: W3 W4
+Trains: T3 T1
+T1: W1 W0 W2 W4 W3
+Trains: T1
+Trains: T3 T2 T1
+Trains: T5 T4 T1
+T5: W2
+T4: W2 W3
+Trains: T4 T1
+T1: W1 W2 W3
+Trains: T1
