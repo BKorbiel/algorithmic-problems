@@ -1,10 +1,13 @@
-The program is to use the "divide and conquer" method to find the number of inversions in a given array. The program must contain a recursive method Inversion() operating in O(n logn) time and using an auxiliary array of length at most n/2+1.
+The program is to use the "divide and conquer" method to find the number of inversions in a given array. The program must contain 
+a recursive method Inversion() operating in O(n logn) time and using an auxiliary array of length at most n/2+1.
 
 Input:
-The first value provided is a positive integer indicating the number of data sets, after which the same number of data sets will appear as input.
+The first value provided is a positive integer indicating the number of data sets, after which the same number of data sets will 
+appear as input.
 Each data set contains:
 - A positive integer in the range of 1 to 2^15 indicating the amount of data being read.
-- The actual data set, consisting of the previously read value number of integers, which are integers in the range of -2^48 to +2^48.
+- The actual data set, consisting of the previously read value number of integers, which are integers in the range of -2^48 
+to +2^48.
 
 Output:
 Number of inversions for every given array.
