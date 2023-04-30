@@ -1,0 +1,53 @@
+ The task is to write two functions that find the elements in the given array whose sum gives the target sum. The first function is a recursive function, and the second is an iterative function that uses a stack and simulates the recursive method.
+
+ Input:
+ The first value provided will be a positive integer z (1 <= z <= 10^6), indicating the number of data sets.
+ Each dataset contains, in subsequent lines:
+ - an integer n (1 <= n <= 10^6) indicating the target sum.
+ - an integer k (1 <= k <= 106) indicating the number of elements.
+ - non-repeating integers a1, a2, ..., ak (1 <= ai <= 10^6 for i from 1 to k) representing the values of elements.
+
+ Output:
+ If there is no solution, the program prints the word "NONE". 
+ For each dataset with a valid solution, the program prints, in two lines:
+ REC: n =
+ ITER: n =
+ Where n is the target sum. Then in both lines, it prints the sequence of input elements separated by a single space, printed in the input order and giving the specified target sum in total.
+ Among all possible sequences, the printed sequence must be the first one in terms of the lexicographic order of its element indicies.
+
+ 
+ Examples:
+ Input:
+ 3
+ 17
+ 4
+ 15 13 2 4
+ 30
+ 4
+ 4 15 15 26
+ 30
+ 4
+ 15 14 13 12
+
+ Output:
+ REC: 17 = 15 2
+ ITER: 17 = 15 2
+ REC: 30 = 4 26
+ ITER: 30 = 4 26
+ NONE
+
+
+ Input:
+ 2
+ 10
+ 5
+ 1 1 1 2 8
+ 47
+ 3
+ 3 44 47
+
+ Output:
+ REC: 10 = 1 1 8
+ ITER: 10 = 1 1 8
+ REC: 47 = 3 44
+ ITER: 47 = 3 44
