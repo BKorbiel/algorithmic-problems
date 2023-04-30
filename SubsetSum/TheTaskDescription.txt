@@ -1,4 +1,5 @@
- The task is to write two functions that find the elements in the given array whose sum gives the target sum. The first function is a recursive function, and the second is an iterative function that uses a stack and simulates the recursive method.
+ The task is to write two functions that find the elements in the given array whose sum gives the target sum. The first function is 
+ a recursive function, and the second is an iterative function that uses a stack and simulates the recursive method.
 
  Input:
  The first value provided will be a positive integer z (1 <= z <= 10^6), indicating the number of data sets.
@@ -12,8 +13,10 @@
  For each dataset with a valid solution, the program prints, in two lines:
  REC: n =
  ITER: n =
- Where n is the target sum. Then in both lines, it prints the sequence of input elements separated by a single space, printed in the input order and giving the specified target sum in total.
- Among all possible sequences, the printed sequence must be the first one in terms of the lexicographic order of its element indicies.
+ Where n is the target sum. Then in both lines, it prints the sequence of input elements separated by a single space, printed 
+ in the input order and giving the specified target sum in total.
+ Among all possible sequences, the printed sequence must be the first one in terms of the lexicographic order of its element 
+ indicies.
 
  
  Examples:
