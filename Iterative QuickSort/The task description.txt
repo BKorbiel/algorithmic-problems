@@ -1,0 +1,58 @@
+The task is to write a program that sorts data collected in CSV format based on a selected column. The program should use the 
+QuickSort algorithm in an iterative version with constant memory complexity and without using a stack for sorting the data. 
+For subtasks with a size smaller than or equal to 5, the SelectionSort algorithm should be used. As a result, the average 
+time complexity of the program for a dataset of size N should be O(N log (N)).
+The program should read the data into an array and modify it to achieve the desired order (it should not solely print the 
+data on the screen).
+
+Input:
+The input for the program is read from standard input. The first line of the input contains a positive integer ranging from 1 
+to 100. This number represents the count of data sets that will appear next in the input.
+Each data set starts with a line containing three comma-separated natural numbers. The first number indicates the number of 
+rows in the data set (excluding the header). The second number is the column number based on which the data should be sorted 
+(numbering starts from 1). The third number encodes the sorting order (1 for ascending order and -1 for descending order). 
+The next line is the header of the data, which is not involved in the sorting. Each column contains either natural numbers or 
+strings exclusively. The values within each column are unique. Sorting of natural numbers should follow the natural ordering, 
+while sorting of strings should follow the lexicographic order (defined by the compareTo method of the String class).
+
+Output:
+For each data set, the program should print the sorted rows of data. The column by which we are sorting should be displayed as 
+the leftmost column, while the remaining columns should retain their original order. After each data set, there should be a 
+single empty line.
+
+Tests:
+Input:
+3
+3,1,-1
+a,b,c
+aaaa,8971,ooo
+aaa,4219,uuu
+aaaab,984719,yyyyyy
+4,3,-1
+a,b,c
+aaaaa,0,553
+bbbb,1,5325
+cccc,2,553
+gggg,3,554
+3,2,1
+a,b,c
+a,abbb,32132
+b,aabb,32132
+c,aaab,32132
+
+Output:
+a,b,c
+aaaab,984719,yyyyyy
+aaaa,8971,ooo
+aaa,4219,uuu
+
+c,a,b
+5325,bbbb,1
+554,gggg,3
+553,cccc,2
+553,aaaaa,0
+
+b,a,c
+aaab,c,32132
+aabb,b,32132
+abbb,a,32132
