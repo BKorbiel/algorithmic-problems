@@ -1,0 +1,58 @@
+The task is to write a Java program that, given two lists of nodes representing descriptions of a binary tree, without duplicates 
+in the INORDER and PREORDER or POSTORDER orders, creates a tree and prints two lists of nodes describing the tree: the first list 
+is in the missing depth-first order, and the second list is in the breadth-first order.
+
+Input:
+The first value to be provided will be a positive integer z, indicating the number of data sets. Each data set contains:
+- An integer 'n' (1 <= n <= 10^6), indicating the number of vertices in the binary tree.
+- The second line contains exactly one of the words: PREORDER or POSTORDER.
+- The next line contains 'n' distinct keys (integers) listed in the respective order mentioned above.
+- The fourth and fifth lines contain a similarly formatted description of the tree traversal in the INORDER order.
+
+Output:
+For each data set, print the following two lists on separate lines:
+- The first list is the missing depth-first order.
+- The second list is the breadth-first order.
+Before each printed list, indicate in previous line the type of traversal it represents, as shown in the example below.
+
+Examples:
+Input:
+4
+15
+PREORDER
+1 2 4 8 9 5 10 11 3 6 12 13 7 14 15
+INORDER
+8 4 9 2 10 5 11 1 12 6 13 3 14 7 15
+15
+POSTORDER
+8 9 4 10 11 5 2 12 13 6 14 15 7 3 1
+INORDER
+8 4 9 2 10 5 11 1 12 6 13 3 14 7 15
+4
+PREORDER
+1 2 3 4
+INORDER
+1 3 4 2
+4
+POSTORDER
+4 3 2 1
+INORDER
+1 3 4 2
+
+Output:
+POSTORDER
+8 9 4 10 11 5 2 12 13 6 14 15 7 3 1
+LEVELORDER
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+PREORDER
+1 2 4 8 9 5 10 11 3 6 12 13 7 14 15
+LEVELORDER
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+POSTORDER
+4 3 2 1
+LEVELORDER
+1 2 3 4
+PREORDER
+1 2 3 4
+LEVELORDER
+1 2 3 4
