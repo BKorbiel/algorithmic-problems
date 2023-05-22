@@ -71,39 +71,3 @@ public class Inversions {
         return result;
     }
 }
-/*
- Tests:
- Wejscie:
- 4
- 5
- 1 2 1 2 1
- 1
- 0
- 2
- 2 1
- 4
- 5 4 4 4
-
- Wyjscie:
- 3
- 0
- 1
- 3
-
- Wejscie:
- 4
- 3
- 1 2 3
- 5
- 2 2 3 2 2
- 5
- 1 1 1 1 2
- 6
- 1 7 5 49 23 2
-
- Wyjscie:
- 0
- 2
- 0
- 6
- */
