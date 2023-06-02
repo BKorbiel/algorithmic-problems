@@ -1,0 +1,46 @@
+Implement a priority queue using an array-based representation of a max-heap.
+The elements of the queue are integers, which can occur multiple times. The queue has two capacity types: 
+N - the maximum number of distinct elements in the queue, and P - the maximum total number of elements in the queue.
+The priority in the queue is determined as follows:
+-If the number of occurrences of element x in the queue is greater than the number of occurrences of element y, 
+then x has a higher priority than y.
+-If both x and y have the same number of occurrences in the queue, the larger number has a higher priority.
+
+Input/Output:
+The input data for the program is read from standard input (keyboard) according to the following specification:
+The first value is a natural number determining the number of data sets.
+For each data set, two natural numbers are provided to determine the capacities of the queue: N and P.
+Each data set may contain the following commands:
+a) i k x1 x2 ... xk - the letter 'i' indicates the insert operation, followed by a positive number k indicating 
+the number of elements to be inserted into the queue, and the elements themselves. If inserting an element would 
+exceed one of the capacity types, it is skipped and not inserted into the queue.
+b) g k - the letter 'g' indicates the getMax operation, which removes k elements with the highest priority from 
+the queue. If k is greater than the number of occurrences of the element with the highest priority, only that 
+number of occurrences will be removed. After removal, the program should output the element with the highest 
+priority and the actual number of removed occurrences. If the queue is empty, the program should output: 0 0.
+c) s - the letter 's' indicates the sort operation. The program should perform heap sort on the queue and output 
+the elements of the queue in ascending order according to their priority, in the format: x1 n1 x2 n2 ... xl nl, where 
+xi is the value and ni is the number of occurrences of the i-th element. The memory complexity of the sorting should 
+be O(1). The sort operation will always be the last command in the data set.
+
+Example:
+Input:
+3
+2 10
+i 4 1 2 3 3 g 3
+i 10 1 1 1 1 3 3 3 3 3 3 g 10
+i 5 2 2 2 2 2 s
+5 6
+i 6 1 2 3 4 5 6 g 2
+i 2 5 5 s
+100 100
+i 10 1 1 1 2 2 2 3 3 4 4 g 1 s
+
+Output:
+2 1
+3 5
+1 5 2 5
+5 1
+1 1 2 1 3 1 4 1 5 2
+2 1
+2 2 3 2 4 2 1 3
